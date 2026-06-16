@@ -1,0 +1,236 @@
+/*  ESTILOS GENERALES */
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: #f4f7f6;
+}
+
+.titulo-pagina {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.campo-busqueda {
+    -fx-background-radius: 20;
+    -fx-padding: 8 15;
+    -fx-border-radius: 20;
+    -fx-border-color: #cbd5e0;
+}
+
+/* TARJETA DE EVENTO (LISTA) */
+.tarjeta-evento {
+    -fx-background-color: #1e1e1e;
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5);
+    -fx-cursor: hand;
+}
+.tarjeta-nombre { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #ffffff; }
+.tarjeta-desc { -fx-text-fill: #b2bec3; -fx-font-size: 14px; -fx-wrap-text: true; }
+.tarjeta-info { -fx-text-fill: #00cec9; -fx-font-size: 13px; -fx-font-weight: bold; }
+
+/* VISTA DE DETALLE (TARJETA CENTRADA)  */
+.contenedor-tarjeta {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 30, 0, 0, 10);
+    -fx-padding: 40;
+    -fx-spacing: 20;
+    -fx-max-width: 600;
+}
+
+.titulo-detalle {
+    -fx-font-size: 32px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #2d3436;
+}
+.desc-detalle {
+    -fx-font-size: 15px;
+    -fx-text-fill: #636e72;
+    -fx-wrap-text: true;
+    -fx-line-spacing: 4;
+}
+.info-detalle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #00cec9;
+    -fx-font-weight: bold;
+}
+
+/* BOTONES */
+.btn-accion {
+    -fx-background-radius: 8;
+    -fx-padding: 10 25;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.btn-unirse { -fx-background-color: #00b894; -fx-text-fill: white; }
+.btn-desapuntarse { -fx-background-color: #636e72; -fx-text-fill: white; }
+.btn-eliminar { -fx-background-color: #d63031; -fx-text-fill: white; }
+.btn-banear { -fx-background-color: #2d3436; -fx-text-fill: white; }
+
+.btn-volver-redondo {
+    -fx-background-color: #f1f2f6;
+    -fx-background-radius: 20;
+    -fx-text-fill: #2f3542;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+}
+.btn-volver-redondo:hover { -fx-background-color: #dfe4ea; }
+
+/* CONTENEDORES DE DISEÑO */
+.scroll-pane { -fx-background-color: transparent; }
+.scroll-pane .viewport { -fx-background-color: transparent; }
+.tile-pane { -fx-alignment: top-center; }
+
+/* ESTILOS GENERALES DEL CHAT */
+.split-pane {
+    -fx-background-color: #1e1f22;
+}
+.split-pane *.split-pane-divider {
+    -fx-background-color: #2b2d31;
+    -fx-padding: 0 1;
+}
+
+/* LISTA DE CHATS  */
+.list-view {
+    -fx-background-color: #2b2d31;
+    -fx-background-insets: 0;
+    -fx-padding: 5;
+}
+.list-cell .label {
+    -fx-text-fill: #000000 !important;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #949ba4; /* Gris claro por defecto */
+    -fx-padding: 10 12;
+    -fx-background-radius: 6;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #35373c;
+    -fx-cursor: hand;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #e3e5e8 !important;
+}
+
+.list-cell:filled:selected .label {
+    -fx-text-fill: #000000 !important;
+    -fx-font-weight: bold;
+}
+
+/*  ÁREA DE MENSAJES  */
+.chat-background {
+    -fx-background-color: #313338;
+}
+
+.welcome-label {
+    -fx-text-fill: #949ba4;
+    -fx-font-size: 16px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* BURBUJAS DE LOS MENSAJES  */
+.msg-container {
+    -fx-padding: 6 12;
+    -fx-background-radius: 12;
+    -fx-max-width: 500px;
+}
+
+/* Mensajes de otros usuarios  */
+.msg-other {
+    -fx-background-color: #2b2d31;
+}
+.msg-text-other {
+    -fx-text-fill: #f2f3f5;
+    -fx-font-size: 14px;
+}
+
+/* Tus propios mensajes  */
+.msg-me {
+    -fx-background-color: #5865f2;
+}
+.msg-text-me {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+}
+
+.msg-sender {
+    -fx-text-fill: #949ba4;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 2 4;
+}
+
+/* CAMPO DE TEXTO Y BOTÓN DE ENVIAR  */
+.chat-input-box {
+    -fx-background-color: #313338;
+    -fx-padding: 15;
+    -fx-border-color: #2b2d31;
+    -fx-border-width: 1 0 0 0;
+}
+
+.chat-input {
+    -fx-background-color: #383a40;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #949ba4;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+.chat-input:focused {
+    -fx-background-color: #404249;
+}
+
+.chat-button {
+    -fx-background-color: #248046;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+.chat-button:hover {
+    -fx-background-color: #1a6535;
+}
+
+/* VISTA PERFIL */
+.perfil-container {
+    -fx-background-color: #121212;
+}
+
+.perfil-nombre {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.perfil-email {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 14px;
+}
+
+.perfil-bio {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+}
+
+/* Botones del menú de Perfil */
+.perfil-button {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.perfil-button:hover {
+    -fx-background-color: #34495e;
+}
