@@ -50,7 +50,7 @@ public class AuthController {
                             response.get("email").asText(),
                             response.get("bio").asText(),
                             response.has("foto_base64") ? response.get("foto_base64").asText() : "",
-                            response.has("isAdmin") && response.get("isAdmin").asBoolean() // Nuevo parámetro
+                            response.has("isAdmin") && response.get("isAdmin").asBoolean()
                     );
                     Platform.runLater(mainApp::showMainApp);
                 }

@@ -33,7 +33,6 @@ public class VistaEventos extends VBox {
         this.eventosActuales = eventos;
         this.setPadding(new Insets(30));
         this.setFillWidth(true);
-        // Cabecera
         Label titulo = new Label("Eventos en progreso");
         titulo.getStyleClass().add("titulo-pagina");
         TextField buscador = new TextField();

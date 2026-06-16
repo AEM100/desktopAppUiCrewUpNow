@@ -7,7 +7,7 @@ public class AuthModel {
     private static String bio;
     private static String fotoBase64;
     private static Integer loggedUserId = null;
-    private static boolean isAdmin = false; // 🔥 Campo necesario para permisos
+    private static boolean isAdmin = false;
 
     public static void setInfo(String n, String e, String b, String f, boolean admin) {
         name = n;
