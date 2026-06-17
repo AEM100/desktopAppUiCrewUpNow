@@ -21,6 +21,7 @@ import org.example.desktopappuicrewupnow.auth.AuthModel;
 import java.util.List;
 import org.example.desktopappuicrewupnow.Main;
 import org.example.desktopappuicrewupnow.auth.SocketCliente;
+import org.example.desktopappuicrewupnow.mapa.crearEvento.VistaCrearEvento;
 
 public class VistaEventos extends VBox {
 
@@ -41,7 +42,22 @@ public class VistaEventos extends VBox {
         buscador.textProperty().addListener((o, old, n) -> filtrarEventos(n));
 
         BorderPane cabecera = new BorderPane();
-        cabecera.setLeft(titulo); cabecera.setRight(buscador);
+
+        cabecera.setLeft(titulo);
+
+        HBox derecha = new HBox(10);
+
+        Button btnCrear = new Button("+ Crear Evento");
+        btnCrear.getStyleClass().add("btn-crear-evento");
+
+        btnCrear.setOnAction(e -> {
+            VistaCrearEvento popup = new VistaCrearEvento(main);
+            popup.showAndWait();
+        });
+
+        derecha.getChildren().addAll(buscador, btnCrear);
+
+        cabecera.setRight(derecha);
 
         tilePane = new TilePane();
         tilePane.setHgap(30); tilePane.setVgap(30);
